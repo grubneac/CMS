@@ -2,6 +2,7 @@ package com.grubneac.CafeDemoCRM.controller;
 
 import com.grubneac.CafeDemoCRM.model.Person;
 import com.grubneac.CafeDemoCRM.repository.PersonRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -16,9 +17,9 @@ import static org.springframework.http.HttpStatus.NO_CONTENT;
 @CrossOrigin(origins = "http://localhost:8080")
 @RestController
 @RequestMapping("/api")
+@AllArgsConstructor
 public class PersonController {
 
-    @Autowired
     PersonRepository personRepository;
 
     @GetMapping("/persons")

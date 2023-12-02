@@ -7,18 +7,21 @@ This project will help to manage flow(customers orders, cooking flow, deposit mo
   <li>Docker</li>
   <li>Flyway</li>
   <li>SpringBoot</li>
-  <li>Spring JPA(Hibernate)</li>
+  <li>Spring Data JPA(Hibernate)</li>
+  <li>Postgresql</li>
   <li>Lombok</li>
 </ol>
 
 ## How to run
 
 
-* Download and install [Docker](https://docs.docker.com/compose/install/)
-* Pull my project
-* Run scripts from [compose.yaml](docker-compose.yml)
-* mvn clean install
-* Run Spring Boot application<
+* Download and install: [Docker](https://docs.docker.com/compose/install/), 
+                        [Maven](https://maven.apache.org/download.cgi), 
+                        [Git](https://git-scm.com/downloads) 
+* Run Docker Desktop
+* Pull my project from git [Repository](https://github.com/grubneac/CMS.git)
+* Build application(mvn clean install)
+* Run Spring Boot application(mvn spring-boot:run)
 * Download Postman and run script by it or from CMD run script:
     <ul>
         <li>'curl http://localhost:8080/api/persons'</li>
