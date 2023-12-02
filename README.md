@@ -10,6 +10,8 @@ This project will help to manage flow(customers orders, cooking flow, deposit mo
   <li>Spring Data JPA(Hibernate)</li>
   <li>Postgresql</li>
   <li>Lombok</li>
+  <li>Spring Security</li>
+  <li>Thymeleaf</li>
 </ol>
 
 ## How to run
@@ -22,11 +24,7 @@ This project will help to manage flow(customers orders, cooking flow, deposit mo
 * Pull my project from git [Repository](https://github.com/grubneac/CMS.git)
 * Build application(mvn clean install)
 * Run Spring Boot application(mvn spring-boot:run)
-* Download Postman and run script by it or from CMD run script:
-    <ul>
-        <li>'curl http://localhost:8080/api/persons'</li>
-        <li>'curl -X POST http://localhost:8080/api/persons -H 'Content-Type: application/json' -d '{"id": 1001, "firstName": "Bevan1", "lastName": "Beech1"}'</li>
-    </ul>
+* Run browser http://localhost:8080/
 
 ## Tools
 <ul>
