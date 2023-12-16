@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JetClientState">
+    <option name="folders">
+      <list>
+        <folderState>
+          <option name="id" value="226cfb03-80b3-44a4-a86b-aa726f19d1a2" />
+          <option name="name" value="CRUD Person" />
+          <option name="requests">
+            <list>
+              <requestState>
+                <option name="auth">
+                  <authState>
+                    <option name="basic">
+                      <basicAuthState>
+                        <option name="pass" value="user" />
+                        <option name="username" value="user" />
+                      </basicAuthState>
+                    </option>
+                    <option name="type" value="BASIC" />
+                  </authState>
+                </option>
+                <option name="id" value="1f5d9ce2-8b3f-4f85-a7c2-91835f224841" />
+                <option name="method" value="GET" />
+                <option name="name" value="SELECT" />
+                <option name="url" value="http://localhost:8080/api/persons/1" />
+              </requestState>
+              <requestState>
+                <option name="auth">
+                  <authState>
+                    <option name="basic">
+                      <basicAuthState>
+                        <option name="pass" value="admin" />
+                        <option name="username" value="admin" />
+                      </basicAuthState>
+                    </option>
+                    <option name="type" value="BASIC" />
+                  </authState>
+                </option>
+                <option name="body">
+                  <bodyState>
+                    <option name="raw" value="{&quot;id&quot;: 1001, &quot;firstName&quot;: &quot;Bevan1&quot;, &quot;lastName&quot;: &quot;Beech1&quot;}" />
+                    <option name="type" value="JSON" />
+                  </bodyState>
+                </option>
+                <option name="headers">
+                  <list>
+                    <headerState>
+                      <option name="key" value="Content-Type" />
+                      <option name="value" value="application/json" />
+                    </headerState>
+                  </list>
+                </option>
+                <option name="id" value="aa591b48-49c4-44ef-a16a-53d0fb5088f5" />
+                <option name="method" value="POST" />
+                <option name="name" value="CREATE" />
+                <option name="url" value="http://localhost:8080/api/persons" />
+              </requestState>
+              <requestState>
+                <option name="auth">
+                  <authState>
+                    <option name="basic">
+                      <basicAuthState>
+                        <option name="pass" value="admin" />
+                        <option name="username" value="admin" />
+                      </basicAuthState>
+                    </option>
+                    <option name="type" value="BASIC" />
+                  </authState>
+                </option>
+                <option name="body">
+                  <bodyState>
+                    <option name="raw" value="{&quot;id&quot;: 1001, &quot;firstName&quot;: &quot;BevanUpdated&quot;, &quot;lastName&quot;: &quot;BeechUpdated&quot;}" />
+                    <option name="type" value="JSON" />
+                  </bodyState>
+                </option>
+                <option name="headers">
+                  <list>
+                    <headerState>
+                      <option name="key" value="Content-Type" />
+                      <option name="value" value="application/json" />
+                    </headerState>
+                  </list>
+                </option>
+                <option name="id" value="ad3dbd2a-49e6-4e83-b1df-81df2ab3ff85" />
+                <option name="method" value="PUT" />
+                <option name="name" value="UPDATE" />
+                <option name="url" value="http://localhost:8080/api/persons/1001" />
+              </requestState>
+              <requestState>
+                <option name="auth">
+                  <authState>
+                    <option name="basic">
+                      <basicAuthState>
+                        <option name="pass" value="admin" />
+                        <option name="username" value="admin" />
+                      </basicAuthState>
+                    </option>
+                    <option name="type" value="BASIC" />
+                  </authState>
+                </option>
+                <option name="body">
+                  <bodyState>
+                    <option name="type" value="JSON" />
+                  </bodyState>
+                </option>
+                <option name="headers">
+                  <list>
+                    <headerState>
+                      <option name="key" value="Content-Type" />
+                      <option name="value" value="application/json" />
+                    </headerState>
+                  </list>
+                </option>
+                <option name="id" value="17cc14d2-2fc7-44b1-9459-fa0ef4206fb2" />
+                <option name="method" value="DELETE" />
+                <option name="name" value="DELETE" />
+                <option name="url" value="http://localhost:8080/api/persons/1001" />
+              </requestState>
+            </list>
+          </option>
+          <option name="sortWeight" value="1000000" />
+          <option name="syncProperties">
+            <synchronizationPropertiesState>
+              <option name="folderPath" value="C:\MyProjects\CafeDemoCRM\.jetclient" />
+            </synchronizationPropertiesState>
+          </option>
+        </folderState>
+      </list>
+    </option>
+    <option name="id" value="11788b29-f453-4c06-8128-190b18a3d9b5" />
+  </component>
+</project>
