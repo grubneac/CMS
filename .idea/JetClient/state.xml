@@ -23,7 +23,7 @@
                 <option name="id" value="1f5d9ce2-8b3f-4f85-a7c2-91835f224841" />
                 <option name="method" value="GET" />
                 <option name="name" value="SELECT" />
-                <option name="url" value="http://localhost:8080/api/persons/1" />
+                <option name="url" value="http://localhost:8080/api/persons/1001" />
               </requestState>
               <requestState>
                 <option name="auth">
