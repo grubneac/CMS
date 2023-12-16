@@ -6,6 +6,7 @@
     </head>
     <body>
         <h1 th:inline="text">Hello <span th:remove="tag" sec:authentication="name">thymeleaf</span>!</h1>
+        <a href="http://localhost:8080/api/persons">Persons table in JSON format</a>
         <form th:action="@{/logout}" method="post">
             <input type="submit" value="Sign Out"/>
         </form>
