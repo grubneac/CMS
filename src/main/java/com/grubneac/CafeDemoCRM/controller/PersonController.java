@@ -5,6 +5,7 @@ import com.grubneac.CafeDemoCRM.repository.PersonRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,6 +24,7 @@ public class PersonController {
     PersonRepository personRepository;
 
     @GetMapping("/persons")
+    @PreAuthorize("hasAuthority('person:read')")
     public ResponseEntity<List<Person>> getAllPersons() {
         try {
             List<Person> allPersons = personRepository.findAll();
@@ -37,6 +39,7 @@ public class PersonController {
     }
 
     @GetMapping("/persons/{id}")
+    @PreAuthorize("hasAuthority('person:read')")
     public ResponseEntity<Person> getPersonNyId(@PathVariable("id") Integer personId) throws Exception {
         Person person = personRepository.findById(personId).
                 orElseThrow(() -> new Exception("Person " + personId + " not found"));
@@ -44,11 +47,13 @@ public class PersonController {
     }
 
     @PostMapping("/persons")
+    @PreAuthorize("hasAuthority('person:write')")
     public Person createPerson(@Validated @RequestBody Person person) {
         return personRepository.save(person);
     }
 
     @PutMapping("/persons/{id}")
+    @PreAuthorize("hasAuthority('person:update')")
     public ResponseEntity<Person> updatePerson(@PathVariable("id") Integer personId,
                                                @Validated @RequestBody Person personDetail) throws Exception {
         Person person = personRepository.findById(personId).
@@ -60,6 +65,7 @@ public class PersonController {
     }
 
     @DeleteMapping("persons/{id}")
+    @PreAuthorize("hasAuthority('person:delete')")
     public Boolean deletePerson(@PathVariable("id") Integer personId) throws Exception {
         Person person = personRepository.findById(personId).
                 orElseThrow(() -> new Exception("Person " + personId + " not found"));
