@@ -10,6 +10,7 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import static com.grubneac.CafeDemoCRM.model.Role.ADMIN;
 import static com.grubneac.CafeDemoCRM.model.Role.USER;
@@ -31,7 +32,13 @@ public class WebSecurityConfig {
                 })
                 .httpBasic(withDefaults())
                 .formLogin((form) -> form.loginPage("/login").permitAll())
-                .logout((logout) -> logout.logoutUrl("/logout").permitAll());
+                .logout((logout) -> logout
+                        .logoutRequestMatcher(new AntPathRequestMatcher("/logout", "POST"))
+                        .invalidateHttpSession(true)
+                        .clearAuthentication(true)
+                        .deleteCookies("JSESSIONID")
+                        .logoutSuccessUrl("/")
+                        .permitAll());
 
         return http.build();
     }
