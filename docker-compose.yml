@@ -9,12 +9,20 @@ services:
       - POSTGRES_USER=admin
     ports:
       - "5432:5432"
-  flyway:
+  flywayOrders:
     image: flyway/flyway:latest
-    container_name: my-flyway
+    container_name: orders-flyway
     command: migrate -url=jdbc:postgresql://postgres:5432/CafeCRM  -user=admin -password=secret -schemas=Orders
     volumes:
-      - ./flyway/sql:/flyway/sql
+      - ./flyway/sql/orders:/flyway/sql/orders
+    depends_on:
+      - postgres
+  flywaySecurity:
+    image: flyway/flyway:latest
+    container_name: security-flyway
+    command: migrate -url=jdbc:postgresql://postgres:5432/CafeCRM  -user=admin -password=secret -schemas=Security
+    volumes:
+      - ./flyway/sql/security:/flyway/sql/security
     depends_on:
       - postgres
 

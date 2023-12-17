@@ -14,7 +14,7 @@
                     <option name="basic">
                       <basicAuthState>
                         <option name="pass" value="user" />
-                        <option name="username" value="user" />
+                        <option name="username" value="user@example.com" />
                       </basicAuthState>
                     </option>
                     <option name="type" value="BASIC" />
@@ -31,7 +31,7 @@
                     <option name="basic">
                       <basicAuthState>
                         <option name="pass" value="admin" />
-                        <option name="username" value="admin" />
+                        <option name="username" value="admin@example.com" />
                       </basicAuthState>
                     </option>
                     <option name="type" value="BASIC" />
@@ -62,7 +62,7 @@
                     <option name="basic">
                       <basicAuthState>
                         <option name="pass" value="admin" />
-                        <option name="username" value="admin" />
+                        <option name="username" value="admin@example.com" />
                       </basicAuthState>
                     </option>
                     <option name="type" value="BASIC" />
@@ -93,7 +93,7 @@
                     <option name="basic">
                       <basicAuthState>
                         <option name="pass" value="admin" />
-                        <option name="username" value="admin" />
+                        <option name="username" value="admin@example.com" />
                       </basicAuthState>
                     </option>
                     <option name="type" value="BASIC" />
