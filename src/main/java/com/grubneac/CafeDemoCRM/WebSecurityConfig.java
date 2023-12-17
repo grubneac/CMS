@@ -33,13 +33,11 @@ public class WebSecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests((requests) -> {
-                    requests
-                            .requestMatchers("/", "/home").permitAll()
-                            .anyRequest().authenticated();
-                })
+                .authorizeHttpRequests((requests) -> requests
+                        .requestMatchers("/", "/home").permitAll()
+                        .anyRequest().authenticated())
                 .httpBasic(withDefaults())
-                .formLogin((form) -> form.loginPage("/login").permitAll())
+                .formLogin((form) -> form.loginPage("/showMyLoginPage").permitAll())
                 .logout((logout) -> logout
                         .logoutRequestMatcher(new AntPathRequestMatcher("/logout", "POST"))
                         .invalidateHttpSession(true)
