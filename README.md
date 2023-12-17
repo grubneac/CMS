@@ -10,8 +10,7 @@ This project will help to manage flow(customers orders, cooking flow, deposit mo
   <li>Spring Data JPA(Hibernate)</li>
   <li>Postgresql</li>
   <li>Lombok</li>
-  <li>Spring Security</li>
-  <li>Thymeleaf</li>
+  <li>Spring Security(JWT)</li>
 </ol>
 
 ## How to run
@@ -22,14 +21,14 @@ This project will help to manage flow(customers orders, cooking flow, deposit mo
                         [Git](https://git-scm.com/downloads) 
 * Run Docker Desktop
 * Pull my project from git [Repository](https://github.com/grubneac/CMS.git)
-* Build application(mvn clean install)
+* Build application(mvn clean install -DskipTests)
 * Run Spring Boot application(mvn spring-boot:run)
-* Run browser http://localhost:8080/
+* Try to call application by Postman or JetClient plugin
 
 ## Tools
 <ul>
     <li>Docker Desktop</li>
-    <li>IntelliJ IDEA(Community Edition)</li>
+    <li>IntelliJ IDEA Community Edition(plugin: JetClient)</li>
     <li>DBeaver</li>
     <li>Postman</li>
     <li>Git</li>

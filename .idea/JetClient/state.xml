@@ -1,8 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JetClientState">
+    <option name="environmentGroups">
+      <list>
+        <environmentGroupState>
+          <option name="environments">
+            <list>
+              <environmentState>
+                <option name="id" value="local" />
+                <option name="name" value="local" />
+              </environmentState>
+            </list>
+          </option>
+          <option name="id" value="new_group" />
+          <option name="name" value="New Group" />
+        </environmentGroupState>
+      </list>
+    </option>
     <option name="folders">
       <list>
+        <folderState>
+          <option name="id" value="a47a2da9-ed11-46c7-832c-520a154f4437" />
+          <option name="name" value="JWT" />
+          <option name="requests">
+            <list>
+              <requestState>
+                <option name="body">
+                  <bodyState>
+                    <option name="raw" value="{&#10;  &quot;email&quot;: &quot;user@example.com&quot;,&#10;  &quot;password&quot;: &quot;user&quot;&#10;}" />
+                    <option name="type" value="JSON" />
+                  </bodyState>
+                </option>
+                <option name="headers">
+                  <list>
+                    <headerState>
+                      <option name="key" value="Content-Type" />
+                      <option name="value" value="application/json" />
+                    </headerState>
+                  </list>
+                </option>
+                <option name="id" value="7ca886a8-00e0-494e-b5da-5a2d3e079a62" />
+                <option name="method" value="POST" />
+                <option name="name" value="LOGIN_user" />
+                <option name="url" value="http://{{host}}:{{port}}/api/v1/auth/login" />
+              </requestState>
+              <requestState>
+                <option name="body">
+                  <bodyState>
+                    <option name="raw" value="{&#10;  &quot;email&quot;: &quot;admin@example.com&quot;,&#10;  &quot;password&quot;: &quot;admin&quot;&#10;}" />
+                    <option name="type" value="JSON" />
+                  </bodyState>
+                </option>
+                <option name="headers">
+                  <list>
+                    <headerState>
+                      <option name="key" value="Content-Type" />
+                      <option name="value" value="application/json" />
+                    </headerState>
+                  </list>
+                </option>
+                <option name="id" value="8577eea1-2515-436f-ab0f-2c4cced8f43b" />
+                <option name="method" value="POST" />
+                <option name="name" value="LOGIN_admin" />
+                <option name="url" value="http://{{host}}:{{port}}/api/v1/auth/login" />
+              </requestState>
+            </list>
+          </option>
+          <option name="sortWeight" value="500000" />
+        </folderState>
         <folderState>
           <option name="id" value="226cfb03-80b3-44a4-a86b-aa726f19d1a2" />
           <option name="name" value="CRUD Person" />
@@ -11,14 +76,16 @@
               <requestState>
                 <option name="auth">
                   <authState>
-                    <option name="basic">
-                      <basicAuthState>
-                        <option name="pass" value="user" />
-                        <option name="username" value="user@example.com" />
-                      </basicAuthState>
-                    </option>
-                    <option name="type" value="BASIC" />
+                    <option name="type" value="NO_AUTH" />
                   </authState>
+                </option>
+                <option name="headers">
+                  <list>
+                    <headerState>
+                      <option name="key" value="Authorization" />
+                      <option name="value" value="eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ1c2VyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzAzOTIxMjkxLCJleHAiOjE3MDM5MjE1OTF9.anVnyhabmHQdSn49GyLrTiMFMTNH9rlfiuGDYlZ0JrybL58YKuhbf3SG4YPBnI_B" />
+                    </headerState>
+                  </list>
                 </option>
                 <option name="id" value="1f5d9ce2-8b3f-4f85-a7c2-91835f224841" />
                 <option name="method" value="GET" />
@@ -28,13 +95,7 @@
               <requestState>
                 <option name="auth">
                   <authState>
-                    <option name="basic">
-                      <basicAuthState>
-                        <option name="pass" value="admin" />
-                        <option name="username" value="admin@example.com" />
-                      </basicAuthState>
-                    </option>
-                    <option name="type" value="BASIC" />
+                    <option name="type" value="NO_AUTH" />
                   </authState>
                 </option>
                 <option name="body">
@@ -49,12 +110,16 @@
                       <option name="key" value="Content-Type" />
                       <option name="value" value="application/json" />
                     </headerState>
+                    <headerState>
+                      <option name="key" value="Authorization" />
+                      <option name="value" value="eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ1c2VyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzAzNDk2MzkwLCJleHAiOjE3MDQxMDExOTB9.D1Hof-2_56KEZAYbyX79gVQ2t60kAmn8YyErWyT0DnE0e9IlABvHEY20DqbTVsmL" />
+                    </headerState>
                   </list>
                 </option>
                 <option name="id" value="aa591b48-49c4-44ef-a16a-53d0fb5088f5" />
                 <option name="method" value="POST" />
                 <option name="name" value="CREATE" />
-                <option name="url" value="http://localhost:8080/api/persons" />
+                <option name="url" value="http://{{host}}:{{port}}/api/persons" />
               </requestState>
               <requestState>
                 <option name="auth">
@@ -79,6 +144,10 @@
                     <headerState>
                       <option name="key" value="Content-Type" />
                       <option name="value" value="application/json" />
+                    </headerState>
+                    <headerState>
+                      <option name="key" value="Authorization" />
+                      <option name="value" value="eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleGFtcGxlLmNvbSIsImlhdCI6MTcwMzQ5NDk0NywiZXhwIjoxNzA0MDk5NzQ3fQ.V5dZLKKRyoHR7kJ0byzc7aKOUupH3JqW46F1gjt-EBdcUJsZbxvLZxL9aCWy3tho" />
                     </headerState>
                   </list>
                 </option>
@@ -110,6 +179,10 @@
                       <option name="key" value="Content-Type" />
                       <option name="value" value="application/json" />
                     </headerState>
+                    <headerState>
+                      <option name="key" value="Authorization" />
+                      <option name="value" value="eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBleGFtcGxlLmNvbSIsImlhdCI6MTcwMzQ5NDk0NywiZXhwIjoxNzA0MDk5NzQ3fQ.V5dZLKKRyoHR7kJ0byzc7aKOUupH3JqW46F1gjt-EBdcUJsZbxvLZxL9aCWy3tho" />
+                    </headerState>
                   </list>
                 </option>
                 <option name="id" value="17cc14d2-2fc7-44b1-9459-fa0ef4206fb2" />
@@ -129,5 +202,10 @@
       </list>
     </option>
     <option name="id" value="11788b29-f453-4c06-8128-190b18a3d9b5" />
+    <option name="selectedEnvironmentIds">
+      <set>
+        <option value="local" />
+      </set>
+    </option>
   </component>
 </project>
