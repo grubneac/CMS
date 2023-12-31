@@ -44,7 +44,8 @@ public class WebSecurityConfig {
                         .clearAuthentication(true)
                         .deleteCookies("JSESSIONID")
                         .logoutSuccessUrl("/")
-                        .permitAll());
+                        .permitAll())
+                .exceptionHandling(a ->a.accessDeniedPage("/showAccessDeniedPage"));
 
         return http.build();
     }
